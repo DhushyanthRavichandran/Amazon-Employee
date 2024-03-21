@@ -1,3 +1,43 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Model Prediction</title>
+</head>
+<body>
+    <h1>Machine Learning Model Prediction</h1>
+    <form action="{{url_for('predict')}}" method="post" >
+        
+        <!-- <input type="number" id="action" name="ACTION" required><br><br> -->
+        
+        <label for="resource">RESOURCE:</label>
+        <input type="number" id="resource" name="RESOURCE" required><br><br>
+        
+        <label for="mgr_id">MGR_ID:</label>
+        <input type="number" id="mgr_id" name="MGR_ID" required><br><br>
+        
+        <label for="role_rollup_1">ROLE_ROLLUP_1:</label>
+        <input type="number" id="role_rollup_1" name="ROLE_ROLLUP_1" required><br><br>
+        
+        <label for="role_rollup_2">ROLE_ROLLUP_2:</label>
+        <input type="number" id="role_rollup_2" name="ROLE_ROLLUP_2" required><br><br>
+        
+        <label for="role_deptname">ROLE_DEPTNAME:</label>
+        <input type="number" id="role_deptname" name="ROLE_DEPTNAME" required><br><br>
+        
+        <label for="role_title">ROLE_TITLE:</label>
+        <input type="number" id="role_title" name="ROLE_TITLE" required><br><br>
+        
+        <label for="role_family_desc">ROLE_FAMILY_DESC:</label>
+        <input type="number" id="role_family_desc" name="ROLE_FAMILY_DESC" required><br><br>
+        
+        <label for="role_family">ROLE_FAMILY:</label>
+        <input type="number" id="role_family" name="ROLE_FAMILY" required><br><br>
+        
+        <label for="role_code">ROLE_CODE:</label>
+        <input type="number" id="role_code" name="ROLE_CODE" required><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    <p>{{ predicted_text }}</p>
+</body>
+</html>
